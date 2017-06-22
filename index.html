@@ -1,0 +1,156 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>University of Missouri Health</title>
+	
+	<link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
+	<script>
+	  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+	
+	  ga('create', 'UA-72746629-2', 'auto');
+	  ga('send', 'pageview');
+	
+	</script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js"></script>
+	<script src="_js/main.js"></script>
+    <script src="_js/responsiveslides.min.js"></script>
+    <link rel="stylesheet" href="_css/main.css" type="text/css">
+	<style>
+		.option {
+			display: block;
+			width: 100%;
+		}
+		.podDesc { margin-top: 0; }
+		.podImg1 { background: #888 url("_img/video_still-1.jpg") no-repeat; }
+		.podImg2 { background: #888 url("_img/video_still-2.jpg") no-repeat; }
+		.podImg3 { background: #888 url("_img/video_still-3.jpg") no-repeat; }
+		#main-holder {
+			
+			margin-top: 200px;
+			padding-top: 0;
+		}
+		@media screen and (max-width: 794px) {
+			#main-holder {
+				margin-top: 0px;
+			}
+		}
+	</style>
+</head>
+
+<body>
+	<div id="video-container">
+		<ul class="rslides">
+          <li><img src="_img/1.jpg" alt=""></li>
+          <li><img src="_img/2.jpg" alt=""></li>
+          <li><img src="_img/4.jpg" alt=""></li>
+          <li><img src="_img/5.jpg" alt=""></li>
+          <li><img src="_img/7.jpg" alt=""></li>
+          <li><img src="_img/8.jpg" alt=""></li>
+          <li><img src="_img/9.jpg" alt=""></li>
+        </ul>
+	</div>
+	<div id="navbar">
+		<a href="index.html"><img class="logo" src="_img/MUHealth_logo.png" alt="" /></a>
+		<div class="socialNav"><a href="http://yesfindsaway.com" target="_blank" style="padding-right:10px;">YES Finds a Way</a> </div>
+		<ul id="nav">
+			<li><a href="research.html">Research</a></li>
+			<li><a href="knowledge.html">Knowledge</a></li>
+			<li><a href="innovation.html">Innovation</a></li>
+			<li><a href="care.html">Care</a></li>
+		</ul>
+
+		<div class="hmbgr">
+			<img src="_img/hmbgr.png" alt="" />
+		</div>
+		<div style="clear:both;"></div>
+	</div>
+	<div class="mobile-nav">
+		<ul>
+			<li><a href="research.html">Research</a></li>
+			<li><a href="knowledge.html">Knowledge</a></li>
+			<li><a href="innovation.html">Innovation</a></li>
+			<li><a href="care.html">Care</a></li>
+		</ul>
+	</div>
+	<div id="social_posts" class="social_posts"></div>
+	<div id="main_content">
+		<div id="main-holder">
+			<span class="big white">YES</span>
+			<div class="info-box">
+				<span class="big">YES</span>
+				<p style="padding: 10px 0 20px;width: 350px;margin: 0 60px; top:18px; font-size: 22px; line-height:1.4em;">
+                	<span class="tagline1">In a single moment,</span>
+                    <br />
+                    <span style="font-weight: 700;">YES</span> <span class="tagline2">can change everything.</span><br /></p>
+				<p class="button">What Is Yes?</p>
+				
+			</div>
+			<div class="option-box" style="">
+				<p>YES can move mountains. It’s the spark that ignites breakthroughs. 
+YES is the key to unlocking medicine’s most complex secrets. And it’s why, at MU Health, we say YES to things like advanced cancer therapies, innovative cardiac treatments and personalized care for every patient who walks through our doors. Because when you make those things possible – anything is possible. </p>
+			</div>
+			<div style="clear:both;"></div>
+		</div>
+	</div>
+	<div class="pod-container" style="margin:-160px auto; width:665px;">
+		<div class="pod podImg1">
+			<div class="podImg">
+				<img data-src="CanResearch_30" src="_img/play_btn.png" alt="" />
+			</div>
+			<div class="podDesc">
+				<h3>YES Moments: Cancer</h3>
+			</div>
+		</div>
+		<div class="pod podImg2">
+			<div class="podImg">
+				<img data-src="Cardio_30" src="_img/play_btn.png" alt="" />
+			</div>
+			<div class="podDesc">
+				<h3>YES Moments: Cardiac</h3>
+			</div>
+		</div>
+	</div>
+
+	<script>
+		if ($(window).width() < 794 || navigator.userAgent.match(/msie/i)) {
+			$('#video-container').remove();
+			$('#main_content').css({
+				'background': 'url(_img/4.jpg)',
+				'background-position': 'center',
+				'background-size': 'cover',
+				'text-align': 'center'
+			});
+			$('.info-box').append('<p style="font-size:.6em;">YES is the key to unlocking medicine’s most complex secrets. And it’s why, at MU Health, we say YES to things like advanced cancer therapies, innovative cardiac treatments and personalized care for every patient who walks through our doors. Because when you make those things possible – anything is possible.</p>');
+		}
+
+		$(window).resize(function() {
+			if ($(window).width() < 794) {
+				$('#video-container').remove();
+				$('#main_content').css({
+					'background': 'url(_img/4.jpg)',
+					'background-position': 'center',
+					'background-size': 'cover',
+					'text-align': 'center'
+				});
+			}
+		});
+	</script>
+    <script>
+	  $(function() {
+		$(".rslides").responsiveSlides({
+		  speed: 1000,            // Integer: Speed of the transition, in milliseconds
+		  timeout: 5000,          // Integer: Time between slide transitions, in milliseconds
+		});
+	  });
+	</script>
+		
+			
+</body>
+
+</html>
